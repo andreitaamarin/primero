@@ -1,0 +1,24 @@
+body {
+    background-color: #282C34;
+    color: #abb2bf;
+}
+
+img{
+    width: 200px;
+    height: auto;
+}
+
+p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 0.9em;
+}
+
+.subparrafo {
+    font-size: 1.2em;
+    color: bisque;
+    
+
+
+    #final {
+        color: #61afef;
+    }
