@@ -1,37 +1,131 @@
-body{
-    background-color: brown;
-}
-#lienzo{
-    width: 500px;
-    height: 500px;
-    border: 3px darkcyan solid;
-    background-color: lightcoral solid;
+body {
+    background-color: #f0f0f0; /* Fondo claro para que el robot se vea */
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; /* Centra el robot horizontalmente */
+    align-items: center; /* Centra el robot verticalmente */
+    min-height: 100vh;
+    margin: 0;
 }
 
-#cara {
-     width: 60%;
-    height: 80%;
-    border: 1px blanchedalmond solid;
-     border-radius: 50%;
-     position: relative;
+#robot-contenedor {
+    position: relative;
+    width: 200px; /* Ancho total de la estructura */
+    /* La altura se adapta al contenido */
 }
 
-.ojo {
-    background-color: black;
-    width: 30%;
-    height: 30%;
-    border-radius: 50%;
+/* ------------------ CABEZA (CUADRADO) ------------------ */
+#cabeza {
+    width: 150px;
+    height: 120px;
+    background-color: #7b7d7f; /* Gris metálico */
+    border: 3px solid #566573;
+    border-radius: 15px; /* Esquinas ligeramente redondeadas */
+    position: relative;
+    margin: 0 auto; 
+    z-index: 2; 
+}
+
+/* ------------------ ANTENAS (CÍRCULOS) ------------------ */
+.antena-izq, .antena-der {
+    width: 15px;
+    height: 15px;
+    background-color: #e74c3c; /* Rojo brillante */
+    border-radius: 50%; /* Círculo perfecto */
     position: absolute;
-    top:25%
+    top: -8px; 
 }
 
-#ojoizq {
-    left: 15%;
+.antena-izq {
+    left: 20px;
 }
-#ojoder {
-    right: 15%;
 
+.antena-der {
+    right: 20px;
+}
+
+/* ------------------ OJO (CÍRCULO) ------------------ */
+#ojo {
+    width: 60px;
+    height: 60px;
+    background-color: #f7dc6f; /* Amarillo claro */
+    border-radius: 50%; /* Círculo perfecto */
+    position: absolute;
+    top: 25px;
+    left: 45px;
+    margin: 0 auto;
+    border: 4px solid #333;
+}
+
+/* ------------------ CUELLO (RECTÁNGULO) ------------------ */
+#cuello {
+    width: 30px;
+    height: 15px;
+    background-color: #566573; /* Gris oscuro */
+    position: absolute;
+    top: 110px; 
+    left: 60px;
+    z-index: 1; 
+}
+
+/* ------------------ CUERPO (RECTÁNGULO) ------------------ */
+#cuerpo {
+    width: 180px;
+    height: 160px;
+    background-color: #aeb6bf; /* Gris más claro */
+    border: 3px solid #566573;
+    border-radius: 10px;
+    position: relative;
+    margin: -5px auto 0; 
+}
+
+/* ------------------ BOTÓN CENTRAL (CÍRCULO) ------------------ */
+#boton-central {
+    width: 25px;
+    height: 25px;
+    background-color: #2ecc71; /* Verde */
+    border-radius: 50%; /* Círculo perfecto */
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%); /* Centrado horizontal */
+}
+
+/* ------------------ PIERNAS (RECTÁNGULOS) ------------------ */
+.pierna-izq, .pierna-der {
+    width: 30px;
+    height: 60px;
+    background-color: #566573;
+    position: absolute;
+    top: 320px; 
+}
+
+.pierna-izq {
+    left: 40px;
+}
+
+.pierna-der {
+    right: 40px;
+}
+
+/* ------------------ PIES (TRIÁNGULOS) ------------------ */
+.pie-izq, .pie-der {
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 375px; 
+}
+
+/* Triángulo apuntando hacia abajo */
+.pie-izq {
+    border-left: 20px solid transparent; 
+    border-right: 20px solid transparent;
+    border-top: 20px solid #566573; /* Color del pie */
+    left: 30px; 
+}
+
+.pie-der {
+    border-left: 20px solid transparent; 
+    border-right: 20px solid transparent;
+    border-top: 20px solid #566573; /* Color del pie */
+    right: 30px; 
 }
