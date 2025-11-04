@@ -76,7 +76,17 @@ body {
     border-radius: 10px;
     position: relative;
     margin: -5px auto 0; 
+    animation-name: myanimation;
+animation-duration: 6s;
+animation-iteration-count: infinite;
 }
+@keyframes myanimation {
+    0% {background-color: red;}
+    24% {background-color: yellow;}
+    50% {background-color: blue;}
+    100% {background-color: green;}
+}
+
 
 /* ------------------ BOTÓN CENTRAL (CÍRCULO) ------------------ */
 #boton-central {
@@ -89,6 +99,7 @@ body {
     left: 50%;
     transform: translateX(-50%); /* Centrado horizontal */
 }
+
 
 /* ------------------ PIERNAS (RECTÁNGULOS) ------------------ */
 .pierna-izq, .pierna-der {
